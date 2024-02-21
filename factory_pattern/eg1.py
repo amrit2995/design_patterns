@@ -18,10 +18,10 @@ class JSONDataExtractor:
         with open(filepath, mode='r', encoding='utf-8') as f:
             self.data = json.load(f)    
             @property    
-            def parsed_data(self):        
+            def parsed_data(self):
                 return self.data
             
-            
+
 def dataextraction_factory(filepath):    
     if filepath.endswith('json'):        
         extractor = JSONDataExtractor    
@@ -46,6 +46,5 @@ def main():
     data = extract_data_from('persons.xml')
     data = extract_data_from('text.json')
     print(data)
-    
     
 main()
