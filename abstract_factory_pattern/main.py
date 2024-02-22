@@ -68,7 +68,6 @@ def validate_age(name):
         return (False, age)    
     return (True, age)
 
-
 def main():    
     name = input("Hello. What's your name? ")    
     valid_input = False
