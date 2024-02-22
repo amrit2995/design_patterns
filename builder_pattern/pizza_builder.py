@@ -1,5 +1,10 @@
 import time
-STEP_DELAY = 1
+from enum import Enum
+PizzaProgress = Enum('PizzaProgress', 'queued preparation baking ready')
+PizzaDough = Enum('PizzaDough', 'thin thick')
+PizzaSauce = Enum('PizzaSauce', 'tomato creme_fraiche')
+PizzaTopping = Enum('PizzaTopping', 'mozzarella double_mozzarella bacon ham mushrooms red_onion oregano')
+STEP_DELAY = 3 # in seconds for the sake of the example
 
 class Pizza:    
     def __init__(self, name):        
