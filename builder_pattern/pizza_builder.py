@@ -39,13 +39,14 @@ class MargaritaBuilder:
         self.pizza = Pizza('margarita')        
         self.progress = PizzaProgress.queued        
         self.baking_time = 5 # in seconds for the sake of         the example    
-        def prepare_dough(self):        
-            self.progress = PizzaProgress.preparation        
-            self.pizza.prepare_dough(PizzaDough.thin)    
-            def add_sauce(self):        print('adding the tomato sauce to your margarita...')        
-            self.pizza.sauce = PizzaSauce.tomato        
-            time.sleep(STEP_DELAY)        
-            print('done with the tomato sauce')
+    def prepare_dough(self):        
+        self.progress = PizzaProgress.preparation        
+        self.pizza.prepare_dough(PizzaDough.thin)    
+    def add_sauce(self):        
+        print('adding the tomato sauce to your margarita...')        
+        self.pizza.sauce = PizzaSauce.tomato        
+        time.sleep(STEP_DELAY)        
+        print('done with the tomato sauce')
             
     def add_topping(self):
         topping_desc = 'double mozzarella, oregano'        
